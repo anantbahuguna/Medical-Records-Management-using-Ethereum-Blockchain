@@ -27,17 +27,17 @@ function App() {
   const getData = async e => {
     e.preventDefault();
     const result = await HelloContract.methods.getGreeting().call();
-    const contractAddress = "0xF16a6b02eB8eF6B0d3FCdE9EE7b773A3F14751f0";
-    web3.eth
-      .filter({
-        address: contractAddress,
-        from: 1,
-        to: "latest"
-      })
-      .get(function(err, result) {
-        // callback code here
-        console.log(result);
-      });
+    // const contractAddress = "0xF16a6b02eB8eF6B0d3FCdE9EE7b773A3F14751f0";
+    // web3.eth
+    //   .filter({
+    //     address: contractAddress,
+    //     from: 1,
+    //     to: "latest"
+    //   })
+    //   .get(function(err, result) {
+    //     // callback code here
+    //     console.log(result);
+    //   });
 
     console.log(result);
   };
