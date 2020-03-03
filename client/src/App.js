@@ -4,21 +4,22 @@ import { HelloAbi } from "./HelloAbi.js";
 
 import "./App.css";
 
-const initialRecord = [];
 const web3 = new Web3(Web3.givenProvider);
 
 const contractAddress = "0xF16a6b02eB8eF6B0d3FCdE9EE7b773A3F14751f0"; //Contract Address
 const HelloContract = new web3.eth.Contract(HelloAbi, contractAddress);
 
+
 function App() {
   const [greeting, setGreeting] = useState(0);
-  const [records, setRecords] = useState(initialRecord);
 
   const setData = async e => {
-    console.log(records);
+    // console.log(greeting);
     e.preventDefault();
     const accounts = await window.ethereum.enable();
+    console.log(accounts)
     const account = accounts[0];
+    console.log(account)
     const gas = await HelloContract.methods.setGreeting(greeting).estimateGas();
     const result = await HelloContract.methods
       .setGreeting(greeting)
@@ -29,7 +30,14 @@ function App() {
   const getData = async e => {
     e.preventDefault();
     const result = await HelloContract.methods.getGreeting().call();
-    setRecords(result);
+    const length = await HelloContract.methods.getLength().call();
+    for(let i = length-1; i>=0; i--)
+    {
+      const element = await HelloContract.methods.getElement(i).call();
+      console.log(element);
+    }
+
+
     // const contractAddress = "0xF16a6b02eB8eF6B0d3FCdE9EE7b773A3F14751f0";
     // web3.eth
     //   .filter({
@@ -41,9 +49,10 @@ function App() {
     //     // callback code here
     //     console.log(result);
     //   });
-    console.log("records",records)
+
     console.log(result);
-    console.log(typeof result);
+    console.log(length);
+    console.log(typeof result)
   };
 
   return (
@@ -56,9 +65,7 @@ function App() {
               type='text'
               name='greeting'
               value={greeting}
-              onChange={e => {
-                setGreeting(e.target.value)
-              }}
+              onChange={e => setGreeting(e.target.value)}
             />
           </label>
           <input type='submit' value='Set Data' />
