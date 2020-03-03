@@ -4,6 +4,7 @@ import { HelloAbi } from "./HelloAbi.js";
 
 import "./App.css";
 
+const initialRecord = [];
 const web3 = new Web3(Web3.givenProvider);
 
 const contractAddress = "0xF16a6b02eB8eF6B0d3FCdE9EE7b773A3F14751f0"; //Contract Address
@@ -11,9 +12,10 @@ const HelloContract = new web3.eth.Contract(HelloAbi, contractAddress);
 
 function App() {
   const [greeting, setGreeting] = useState(0);
+  const [records, setRecords] = useState(initialRecord);
 
   const setData = async e => {
-    console.log(greeting);
+    console.log(records);
     e.preventDefault();
     const accounts = await window.ethereum.enable();
     const account = accounts[0];
@@ -27,6 +29,7 @@ function App() {
   const getData = async e => {
     e.preventDefault();
     const result = await HelloContract.methods.getGreeting().call();
+    setRecords(result);
     // const contractAddress = "0xF16a6b02eB8eF6B0d3FCdE9EE7b773A3F14751f0";
     // web3.eth
     //   .filter({
@@ -38,8 +41,9 @@ function App() {
     //     // callback code here
     //     console.log(result);
     //   });
-
+    console.log("records",records)
     console.log(result);
+    console.log(typeof result);
   };
 
   return (
@@ -52,7 +56,9 @@ function App() {
               type='text'
               name='greeting'
               value={greeting}
-              onChange={e => setGreeting(e.target.value)}
+              onChange={e => {
+                setGreeting(e.target.value)
+              }}
             />
           </label>
           <input type='submit' value='Set Data' />
