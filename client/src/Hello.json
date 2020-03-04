@@ -3589,12 +3589,11 @@
       "events": {},
       "links": {},
       "address": "0xF16a6b02eB8eF6B0d3FCdE9EE7b773A3F14751f0",
-      "transactionHash": "0xe826bc6cb128a4c48f961d5555c0245dfb6279de26dd4eea3a7f9ce477484d09"
+      "transactionHash": "0xdbaf7d03226c6726507078adb73c35551dc0db6f39e049257825d52fe4ce6720"
     }
   },
   "schemaVersion": "3.0.22",
-  "updatedAt": "2020-03-04T16:55:40.930Z",
-  "networkType": "ethereum",
+  "updatedAt": "2020-03-04T16:51:08.932Z",
   "devdoc": {
     "methods": {}
   },

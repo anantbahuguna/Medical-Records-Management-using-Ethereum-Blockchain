@@ -1,0 +1,14 @@
+.button {
+  margin: 15;
+}
+
+.centerText {
+  textalign: "center";
+  margin: "auto";
+}
+
+.center {
+  margin: "auto";
+  width: "30%";
+  padding: "40px";
+}
