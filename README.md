@@ -1,5 +1,7 @@
 # Medical-Records-Management-using-Ethereum-Blockchain
 
+<img src='https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/256px-Ethereum_logo_2014.svg.png' />
+
 ## Install dependencies for React App-
 ```
 cd client
