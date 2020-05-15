@@ -1,0 +1,1426 @@
+{
+  "contractName": "Login",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_key",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "password",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "name": "add",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_key",
+          "type": "address"
+        }
+      ],
+      "name": "remove",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_key",
+          "type": "address"
+        }
+      ],
+      "name": "getByKey",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "password",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct Login.Patient",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_key\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"password\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"add\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_key\",\"type\":\"address\"}],\"name\":\"getByKey\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"password\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"internalType\":\"struct Login.Patient\",\"name\":\"\",\"type\":\"tuple\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"_key\",\"type\":\"address\"}],\"name\":\"remove\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/anant/minor2/Medical-Records-Management-using-Ethereum-Blockchain/contracts/Login.sol\":\"Login\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/anant/minor2/Medical-Records-Management-using-Ethereum-Blockchain/contracts/Login.sol\":{\"keccak256\":\"0x24d08954291a9828c907d6ebdb2c5fb3dc679e3f5496d03ec2d167ea8193b3b0\",\"urls\":[\"bzz-raw://c5aef68bd85bc7f85b29a4f0d9e6d7f4bccb91743b398c98c0faedce41e93daa\",\"dweb:/ipfs/QmeEZ3pmfrwcg7THdLdP1tJzt8B2zbwv1b9UPQgJdNyFjh\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061074e806100206000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806329092d0e1461004657806346bc7fd914610062578063498770381461007e575b600080fd5b610060600480360361005b91908101906104b3565b6100ae565b005b61007c600480360361007791908101906104dc565b610112565b005b610098600480360361009391908101906104b3565b6101a7565b6040516100a591906105d8565b60405180910390f35b6000808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600080820160006100fd9190610343565b60018201600061010d9190610343565b505050565b6040518060400160405280838152602001828152506000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082015181600001908051906020019061018192919061038b565b50602082015181600101908051906020019061019e92919061038b565b50905050505050565b6101af61040b565b6000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020604051806040016040529081600082018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102915780601f1061026657610100808354040283529160200191610291565b820191906000526020600020905b81548152906001019060200180831161027457829003601f168201915b50505050508152602001600182018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103335780601f1061030857610100808354040283529160200191610333565b820191906000526020600020905b81548152906001019060200180831161031657829003601f168201915b5050505050815250509050919050565b50805460018160011615610100020316600290046000825580601f106103695750610388565b601f0160209004906000526020600020908101906103879190610425565b5b50565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103cc57805160ff19168380011785556103fa565b828001600101855582156103fa579182015b828111156103f95782518255916020019190600101906103de565b5b5090506104079190610425565b5090565b604051806040016040528060608152602001606081525090565b61044791905b8082111561044357600081600090555060010161042b565b5090565b90565b600081359050610459816106f4565b92915050565b600082601f83011261047057600080fd5b813561048361047e82610627565b6105fa565b9150808252602083016020830185838301111561049f57600080fd5b6104aa8382846106a1565b50505092915050565b6000602082840312156104c557600080fd5b60006104d38482850161044a565b91505092915050565b6000806000606084860312156104f157600080fd5b60006104ff8682870161044a565b935050602084013567ffffffffffffffff81111561051c57600080fd5b6105288682870161045f565b925050604084013567ffffffffffffffff81111561054557600080fd5b6105518682870161045f565b9150509250925092565b600061056682610653565b610570818561065e565b93506105808185602086016106b0565b610589816106e3565b840191505092915050565b600060408301600083015184820360008601526105b1828261055b565b915050602083015184820360208601526105cb828261055b565b9150508091505092915050565b600060208201905081810360008301526105f28184610594565b905092915050565b6000604051905081810181811067ffffffffffffffff8211171561061d57600080fd5b8060405250919050565b600067ffffffffffffffff82111561063e57600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b600082825260208201905092915050565b600061067a82610681565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b82818337600083830152505050565b60005b838110156106ce5780820151818401526020810190506106b3565b838111156106dd576000848401525b50505050565b6000601f19601f8301169050919050565b6106fd8161066f565b811461070857600080fd5b5056fea365627a7a7231582025676dad53e69c48d9e7dec8f577ee1f88b9ff98090e4efa38e89652fba6d7056c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806329092d0e1461004657806346bc7fd914610062578063498770381461007e575b600080fd5b610060600480360361005b91908101906104b3565b6100ae565b005b61007c600480360361007791908101906104dc565b610112565b005b610098600480360361009391908101906104b3565b6101a7565b6040516100a591906105d8565b60405180910390f35b6000808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600080820160006100fd9190610343565b60018201600061010d9190610343565b505050565b6040518060400160405280838152602001828152506000808573ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082015181600001908051906020019061018192919061038b565b50602082015181600101908051906020019061019e92919061038b565b50905050505050565b6101af61040b565b6000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020604051806040016040529081600082018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102915780601f1061026657610100808354040283529160200191610291565b820191906000526020600020905b81548152906001019060200180831161027457829003601f168201915b50505050508152602001600182018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156103335780601f1061030857610100808354040283529160200191610333565b820191906000526020600020905b81548152906001019060200180831161031657829003601f168201915b5050505050815250509050919050565b50805460018160011615610100020316600290046000825580601f106103695750610388565b601f0160209004906000526020600020908101906103879190610425565b5b50565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103cc57805160ff19168380011785556103fa565b828001600101855582156103fa579182015b828111156103f95782518255916020019190600101906103de565b5b5090506104079190610425565b5090565b604051806040016040528060608152602001606081525090565b61044791905b8082111561044357600081600090555060010161042b565b5090565b90565b600081359050610459816106f4565b92915050565b600082601f83011261047057600080fd5b813561048361047e82610627565b6105fa565b9150808252602083016020830185838301111561049f57600080fd5b6104aa8382846106a1565b50505092915050565b6000602082840312156104c557600080fd5b60006104d38482850161044a565b91505092915050565b6000806000606084860312156104f157600080fd5b60006104ff8682870161044a565b935050602084013567ffffffffffffffff81111561051c57600080fd5b6105288682870161045f565b925050604084013567ffffffffffffffff81111561054557600080fd5b6105518682870161045f565b9150509250925092565b600061056682610653565b610570818561065e565b93506105808185602086016106b0565b610589816106e3565b840191505092915050565b600060408301600083015184820360008601526105b1828261055b565b915050602083015184820360208601526105cb828261055b565b9150508091505092915050565b600060208201905081810360008301526105f28184610594565b905092915050565b6000604051905081810181811067ffffffffffffffff8211171561061d57600080fd5b8060405250919050565b600067ffffffffffffffff82111561063e57600080fd5b601f19601f8301169050602081019050919050565b600081519050919050565b600082825260208201905092915050565b600061067a82610681565b9050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b82818337600083830152505050565b60005b838110156106ce5780820151818401526020810190506106b3565b838111156106dd576000848401525b50505050565b6000601f19601f8301169050919050565b6106fd8161066f565b811461070857600080fd5b5056fea365627a7a7231582025676dad53e69c48d9e7dec8f577ee1f88b9ff98090e4efa38e89652fba6d7056c6578706572696d656e74616cf564736f6c63430005100040",
+  "sourceMap": "68:606:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:606:2;;;;;;;",
+  "deployedSourceMap": "68:606:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:606:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;356:75;;;;;;;;;;;;;;;;:::i;:::-;;215:135;;;;;;;;;;;;;;;;:::i;:::-;;565:107;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;356:75;410:8;:14;419:4;410:14;;;;;;;;;;;;;;;;403:21;;;;;;;;:::i;:::-;;;;;;;;;:::i;:::-;;;356:75;:::o;215:135::-;320:23;;;;;;;;328:8;320:23;;;;338:4;320:23;;;303:8;:14;312:4;303:14;;;;;;;;;;;;;;;:40;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;215:135;;;:::o;565:107::-;618:14;;:::i;:::-;651:8;:14;660:4;651:14;;;;;;;;;;;;;;;644:21;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;565:107;;;:::o;68:606::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;5:130:-1:-;;85:6;72:20;63:29;;97:33;124:5;97:33;;;57:78;;;;;143:442;;245:3;238:4;230:6;226:17;222:27;212:2;;263:1;260;253:12;212:2;300:6;287:20;322:65;337:49;379:6;337:49;;;322:65;;;313:74;;407:6;400:5;393:21;443:4;435:6;431:17;476:4;469:5;465:16;511:3;502:6;497:3;493:16;490:25;487:2;;;528:1;525;518:12;487:2;538:41;572:6;567:3;562;538:41;;;205:380;;;;;;;;593:241;;697:2;685:9;676:7;672:23;668:32;665:2;;;713:1;710;703:12;665:2;748:1;765:53;810:7;801:6;790:9;786:22;765:53;;;755:63;;727:97;659:175;;;;;841:703;;;;999:2;987:9;978:7;974:23;970:32;967:2;;;1015:1;1012;1005:12;967:2;1050:1;1067:53;1112:7;1103:6;1092:9;1088:22;1067:53;;;1057:63;;1029:97;1185:2;1174:9;1170:18;1157:32;1209:18;1201:6;1198:30;1195:2;;;1241:1;1238;1231:12;1195:2;1261:63;1316:7;1307:6;1296:9;1292:22;1261:63;;;1251:73;;1136:194;1389:2;1378:9;1374:18;1361:32;1413:18;1405:6;1402:30;1399:2;;;1445:1;1442;1435:12;1399:2;1465:63;1520:7;1511:6;1500:9;1496:22;1465:63;;;1455:73;;1340:194;961:583;;;;;;1551:319;;1649:35;1678:5;1649:35;;;1696:61;1750:6;1745:3;1696:61;;;1689:68;;1762:52;1807:6;1802:3;1795:4;1788:5;1784:16;1762:52;;;1835:29;1857:6;1835:29;;;1830:3;1826:39;1819:46;;1629:241;;;;;;1928:641;;2077:4;2072:3;2068:14;2164:4;2157:5;2153:16;2147:23;2216:3;2210:4;2206:14;2199:4;2194:3;2190:14;2183:38;2236:69;2300:4;2286:12;2236:69;;;2228:77;;2097:220;2390:4;2383:5;2379:16;2373:23;2442:3;2436:4;2432:14;2425:4;2420:3;2416:14;2409:38;2462:69;2526:4;2512:12;2462:69;;;2454:77;;2327:216;2560:4;2553:11;;2050:519;;;;;;2576:357;;2742:2;2731:9;2727:18;2719:26;;2792:9;2786:4;2782:20;2778:1;2767:9;2763:17;2756:47;2817:106;2918:4;2909:6;2817:106;;;2809:114;;2713:220;;;;;2940:256;;3002:2;2996:9;2986:19;;3040:4;3032:6;3028:17;3139:6;3127:10;3124:22;3103:18;3091:10;3088:34;3085:62;3082:2;;;3160:1;3157;3150:12;3082:2;3180:10;3176:2;3169:22;2980:216;;;;;3203:322;;3347:18;3339:6;3336:30;3333:2;;;3379:1;3376;3369:12;3333:2;3446:4;3442:9;3435:4;3427:6;3423:17;3419:33;3411:41;;3510:4;3504;3500:15;3492:23;;3270:255;;;;3532:118;;3622:5;3616:12;3606:22;;3587:63;;;;3658:153;;3763:6;3758:3;3751:19;3800:4;3795:3;3791:14;3776:29;;3744:67;;;;;3819:91;;3881:24;3899:5;3881:24;;;3870:35;;3864:46;;;;3917:121;;3990:42;3983:5;3979:54;3968:65;;3962:76;;;;4046:145;4127:6;4122:3;4117;4104:30;4183:1;4174:6;4169:3;4165:16;4158:27;4097:94;;;;4200:268;4265:1;4272:101;4286:6;4283:1;4280:13;4272:101;;;4362:1;4357:3;4353:11;4347:18;4343:1;4338:3;4334:11;4327:39;4308:2;4305:1;4301:10;4296:15;;4272:101;;;4388:6;4385:1;4382:13;4379:2;;;4453:1;4444:6;4439:3;4435:16;4428:27;4379:2;4249:219;;;;;4476:97;;4564:2;4560:7;4555:2;4548:5;4544:14;4540:28;4530:38;;4524:49;;;;4581:117;4650:24;4668:5;4650:24;;;4643:5;4640:35;4630:2;;4689:1;4686;4679:12;4630:2;4624:74;",
+  "source": "pragma experimental ABIEncoderV2;\npragma solidity >=0.4.21 <0.7.0;\n\ncontract Login {\n\n    struct Patient {\n        string password;\n        string name;\n    }\n    mapping(address => Patient) internal patients;\n\n    function add(address _key, string memory password, string memory name) public {\n        patients[_key] = Patient(password, name);\n    }\n\n    function remove(address _key) public {\n        delete patients[_key];\n    }\n    \n    // function contains(address _key) public view returns (bool) {\n    //     return patients[_key] != NULL;\n    // }\n    \n    function getByKey(address _key) public view returns (Patient memory) {\n        return patients[_key];\n    }\n}",
+  "sourcePath": "/home/anant/minor2/Medical-Records-Management-using-Ethereum-Blockchain/contracts/Login.sol",
+  "ast": {
+    "absolutePath": "/home/anant/minor2/Medical-Records-Management-using-Ethereum-Blockchain/contracts/Login.sol",
+    "exportedSymbols": {
+      "Login": [
+        265
+      ]
+    },
+    "id": 266,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 212,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:2"
+      },
+      {
+        "id": 213,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "34:32:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 265,
+        "linearizedBaseContracts": [
+          265
+        ],
+        "name": "Login",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Login.Patient",
+            "id": 218,
+            "members": [
+              {
+                "constant": false,
+                "id": 215,
+                "name": "password",
+                "nodeType": "VariableDeclaration",
+                "scope": 218,
+                "src": "115:15:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 214,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "115:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 217,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 218,
+                "src": "140:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 216,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "140:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Patient",
+            "nodeType": "StructDefinition",
+            "scope": 265,
+            "src": "90:68:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 222,
+            "name": "patients",
+            "nodeType": "VariableDeclaration",
+            "scope": 265,
+            "src": "163:45:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Patient_$218_storage_$",
+              "typeString": "mapping(address => struct Login.Patient)"
+            },
+            "typeName": {
+              "id": 221,
+              "keyType": {
+                "id": 219,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "171:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "163:27:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Patient_$218_storage_$",
+                "typeString": "mapping(address => struct Login.Patient)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 220,
+                "name": "Patient",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 218,
+                "src": "182:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Patient_$218_storage_ptr",
+                  "typeString": "struct Login.Patient"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 240,
+              "nodeType": "Block",
+              "src": "293:57:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 238,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 231,
+                        "name": "patients",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 222,
+                        "src": "303:8:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Patient_$218_storage_$",
+                          "typeString": "mapping(address => struct Login.Patient storage ref)"
+                        }
+                      },
+                      "id": 233,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 232,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 224,
+                        "src": "312:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "303:14:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Patient_$218_storage",
+                        "typeString": "struct Login.Patient storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 235,
+                          "name": "password",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 226,
+                          "src": "328:8:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 236,
+                          "name": "name",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 228,
+                          "src": "338:4:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 234,
+                        "name": "Patient",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 218,
+                        "src": "320:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_Patient_$218_storage_ptr_$",
+                          "typeString": "type(struct Login.Patient storage pointer)"
+                        }
+                      },
+                      "id": 237,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "320:23:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Patient_$218_memory",
+                        "typeString": "struct Login.Patient memory"
+                      }
+                    },
+                    "src": "303:40:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Patient_$218_storage",
+                      "typeString": "struct Login.Patient storage ref"
+                    }
+                  },
+                  "id": 239,
+                  "nodeType": "ExpressionStatement",
+                  "src": "303:40:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 241,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "add",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 229,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 224,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 241,
+                  "src": "228:12:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 223,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "228:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 226,
+                  "name": "password",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 241,
+                  "src": "242:22:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 225,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "242:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 228,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 241,
+                  "src": "266:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 227,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "266:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "227:58:2"
+            },
+            "returnParameters": {
+              "id": 230,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "293:0:2"
+            },
+            "scope": 265,
+            "src": "215:135:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 251,
+              "nodeType": "Block",
+              "src": "393:38:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 249,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "delete",
+                    "prefix": true,
+                    "src": "403:21:2",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 246,
+                        "name": "patients",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 222,
+                        "src": "410:8:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Patient_$218_storage_$",
+                          "typeString": "mapping(address => struct Login.Patient storage ref)"
+                        }
+                      },
+                      "id": 248,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 247,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 243,
+                        "src": "419:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "410:14:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Patient_$218_storage",
+                        "typeString": "struct Login.Patient storage ref"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 250,
+                  "nodeType": "ExpressionStatement",
+                  "src": "403:21:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 252,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "remove",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 244,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 243,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 252,
+                  "src": "372:12:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 242,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "372:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "371:14:2"
+            },
+            "returnParameters": {
+              "id": 245,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "393:0:2"
+            },
+            "scope": 265,
+            "src": "356:75:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 263,
+              "nodeType": "Block",
+              "src": "634:38:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 259,
+                      "name": "patients",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 222,
+                      "src": "651:8:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Patient_$218_storage_$",
+                        "typeString": "mapping(address => struct Login.Patient storage ref)"
+                      }
+                    },
+                    "id": 261,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 260,
+                      "name": "_key",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 254,
+                      "src": "660:4:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "651:14:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Patient_$218_storage",
+                      "typeString": "struct Login.Patient storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 258,
+                  "id": 262,
+                  "nodeType": "Return",
+                  "src": "644:21:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 264,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getByKey",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 255,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 254,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 264,
+                  "src": "583:12:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 253,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "583:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "582:14:2"
+            },
+            "returnParameters": {
+              "id": 258,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 257,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 264,
+                  "src": "618:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Patient_$218_memory_ptr",
+                    "typeString": "struct Login.Patient"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 256,
+                    "name": "Patient",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 218,
+                    "src": "618:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Patient_$218_storage_ptr",
+                      "typeString": "struct Login.Patient"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "617:16:2"
+            },
+            "scope": 265,
+            "src": "565:107:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 266,
+        "src": "68:606:2"
+      }
+    ],
+    "src": "0:674:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/anant/minor2/Medical-Records-Management-using-Ethereum-Blockchain/contracts/Login.sol",
+    "exportedSymbols": {
+      "Login": [
+        265
+      ]
+    },
+    "id": 266,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 212,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:33:2"
+      },
+      {
+        "id": 213,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "34:32:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 265,
+        "linearizedBaseContracts": [
+          265
+        ],
+        "name": "Login",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Login.Patient",
+            "id": 218,
+            "members": [
+              {
+                "constant": false,
+                "id": 215,
+                "name": "password",
+                "nodeType": "VariableDeclaration",
+                "scope": 218,
+                "src": "115:15:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 214,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "115:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 217,
+                "name": "name",
+                "nodeType": "VariableDeclaration",
+                "scope": 218,
+                "src": "140:11:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 216,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "140:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Patient",
+            "nodeType": "StructDefinition",
+            "scope": 265,
+            "src": "90:68:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 222,
+            "name": "patients",
+            "nodeType": "VariableDeclaration",
+            "scope": 265,
+            "src": "163:45:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Patient_$218_storage_$",
+              "typeString": "mapping(address => struct Login.Patient)"
+            },
+            "typeName": {
+              "id": 221,
+              "keyType": {
+                "id": 219,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "171:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "163:27:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Patient_$218_storage_$",
+                "typeString": "mapping(address => struct Login.Patient)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 220,
+                "name": "Patient",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 218,
+                "src": "182:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Patient_$218_storage_ptr",
+                  "typeString": "struct Login.Patient"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 240,
+              "nodeType": "Block",
+              "src": "293:57:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 238,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 231,
+                        "name": "patients",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 222,
+                        "src": "303:8:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Patient_$218_storage_$",
+                          "typeString": "mapping(address => struct Login.Patient storage ref)"
+                        }
+                      },
+                      "id": 233,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 232,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 224,
+                        "src": "312:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "303:14:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Patient_$218_storage",
+                        "typeString": "struct Login.Patient storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 235,
+                          "name": "password",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 226,
+                          "src": "328:8:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 236,
+                          "name": "name",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 228,
+                          "src": "338:4:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          },
+                          {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        ],
+                        "id": 234,
+                        "name": "Patient",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 218,
+                        "src": "320:7:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_struct$_Patient_$218_storage_ptr_$",
+                          "typeString": "type(struct Login.Patient storage pointer)"
+                        }
+                      },
+                      "id": 237,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "structConstructorCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "320:23:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Patient_$218_memory",
+                        "typeString": "struct Login.Patient memory"
+                      }
+                    },
+                    "src": "303:40:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Patient_$218_storage",
+                      "typeString": "struct Login.Patient storage ref"
+                    }
+                  },
+                  "id": 239,
+                  "nodeType": "ExpressionStatement",
+                  "src": "303:40:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 241,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "add",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 229,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 224,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 241,
+                  "src": "228:12:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 223,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "228:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 226,
+                  "name": "password",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 241,
+                  "src": "242:22:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 225,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "242:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 228,
+                  "name": "name",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 241,
+                  "src": "266:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 227,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "266:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "227:58:2"
+            },
+            "returnParameters": {
+              "id": 230,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "293:0:2"
+            },
+            "scope": 265,
+            "src": "215:135:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 251,
+              "nodeType": "Block",
+              "src": "393:38:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 249,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "delete",
+                    "prefix": true,
+                    "src": "403:21:2",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 246,
+                        "name": "patients",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 222,
+                        "src": "410:8:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Patient_$218_storage_$",
+                          "typeString": "mapping(address => struct Login.Patient storage ref)"
+                        }
+                      },
+                      "id": 248,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 247,
+                        "name": "_key",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 243,
+                        "src": "419:4:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "410:14:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Patient_$218_storage",
+                        "typeString": "struct Login.Patient storage ref"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 250,
+                  "nodeType": "ExpressionStatement",
+                  "src": "403:21:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 252,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "remove",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 244,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 243,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 252,
+                  "src": "372:12:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 242,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "372:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "371:14:2"
+            },
+            "returnParameters": {
+              "id": 245,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "393:0:2"
+            },
+            "scope": 265,
+            "src": "356:75:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 263,
+              "nodeType": "Block",
+              "src": "634:38:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 259,
+                      "name": "patients",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 222,
+                      "src": "651:8:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Patient_$218_storage_$",
+                        "typeString": "mapping(address => struct Login.Patient storage ref)"
+                      }
+                    },
+                    "id": 261,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 260,
+                      "name": "_key",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 254,
+                      "src": "660:4:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "651:14:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Patient_$218_storage",
+                      "typeString": "struct Login.Patient storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 258,
+                  "id": 262,
+                  "nodeType": "Return",
+                  "src": "644:21:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 264,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getByKey",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 255,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 254,
+                  "name": "_key",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 264,
+                  "src": "583:12:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 253,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "583:7:2",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "582:14:2"
+            },
+            "returnParameters": {
+              "id": 258,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 257,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 264,
+                  "src": "618:14:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Patient_$218_memory_ptr",
+                    "typeString": "struct Login.Patient"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 256,
+                    "name": "Patient",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 218,
+                    "src": "618:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Patient_$218_storage_ptr",
+                      "typeString": "struct Login.Patient"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "617:16:2"
+            },
+            "scope": 265,
+            "src": "565:107:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 266,
+        "src": "68:606:2"
+      }
+    ],
+    "src": "0:674:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x19E6EF5826560410Ff1872575FCd7f9AcA308Eca",
+      "transactionHash": "0x1b87e38090471382e8a34282bb8f8ddc0720a7fd3f04dcdff147fd1ff8f4da20"
+    }
+  },
+  "schemaVersion": "3.0.22",
+  "updatedAt": "2020-05-15T10:38:33.246Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

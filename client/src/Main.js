@@ -59,7 +59,9 @@ class Main extends Component {
             // const result = await HelloContract.methods.getGreeting().call();
             const length = await HelloContract.methods.getLength().call();
             this.setState({
-              data: []
+              data: [
+                
+              ]
             })
             for(let i = length-1; i>=0; i--)
             {
